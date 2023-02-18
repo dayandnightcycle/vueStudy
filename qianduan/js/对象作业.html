@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var computer = {
+            color:'黑色',
+            weight:100,
+            brand:'联想',
+            watchMovie:function(){
+                console.log('看电影');
+            },
+            listrnMusic:function(){
+                console.log('听音乐');
+            },
+            playGame:function(){
+                console.log('玩游戏');
+            },
+            code:function(){
+                console.log('敲代码');
+            },
+
+        }
+        console.log(computer.color);
+        computer.code();
+
+        var button = new Object();
+        button.width = 100;
+        button.height = 200;
+        button.background = 'green';
+        button.click = function(){
+            console.log('点击行为');
+        }
+        console.log(button.width);
+        button.click();
+
+        function Car(weight,color,brand){
+            this.weight = weight;
+            this.color = color;
+            this.brand = brand;
+            this.zairen = function(){
+                console.log('载人');
+            }
+        }
+        var car = new Car(1,'蓝色','大众');
+        console.log(car.weight);
+        car.zairen();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

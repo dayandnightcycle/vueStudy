@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var time = new Date();
+        // console.log(time.valueOf());
+        // console.log(time.getTime());
+        // var ti = +new Date();
+        // console.log(ti);
+
+        function countDown(time){
+            var nowTime = +new Date();
+            var inputTime = new Date(time);
+            var count = parseInt((inputTime - nowTime)/1000);
+
+            var d = parseInt(count/60/60/24);
+            d = d > 10 ? d : '0' + d;
+            var h = parseInt(count/60/60%24);
+            h = h > 10 ? h : '0' + h; 
+            var m = parseInt(count/60%60);
+            m = m > 10 ? m : '0' + m;
+            var s = parseInt(count%60);
+            s = s > 10 ? s : '0' + s;
+            return d + '天' + h + '时' + m + '分' + s +'秒';
+        }
+        console.log(countDown('2022-4-11 00:50:00'));
+        var time = new Date();
+        console.log(time);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

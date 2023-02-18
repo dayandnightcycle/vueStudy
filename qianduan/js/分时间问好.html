@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            img{
+                width: 200px;
+            }
+        </style>
+</head>
+<body>
+    <div>
+        <img src="images/s.gif" alt="">
+    </div>
+    <p>早上好</p>
+    <script>
+        var i = document.getElementsByTagName('img');
+        var pp = document.getElementsByTagName('p');
+        var i2 = document.querySelector('img');
+        // var pp = document.querySelector('p');
+        console.dir(i);
+       console.log(typeof i);
+        console.dir(i2);
+        console.log(typeof i2);
+        var ti = new Date();
+        var h = ti.getHours();
+        console.log(h);
+
+        // if(h < 12 ){
+        //     i.src='images/s.gif';
+        //     pp.innerHTML='上午好';
+        // }else if(h < 18){
+        //     i.src='images/x.gif';
+        //     pp.innerHTML='下午好';
+        // }else{
+        //     i.src='images/w.gif';
+        //     pp.innerHTML='晚上好';
+        // }
+        if(h < 12 ){
+            i[0].src='images/s.gif';
+            pp[0].innerHTML='上午好';
+        }else if(h < 18){
+            i[0].src='images/x.gif';
+            pp[0].innerHTML='下午好';
+        }else{
+            i[0].src='images/w.gif';
+            pp[0].innerHTML='晚上好';
+        }
+    </script>
+</body>
+</html>

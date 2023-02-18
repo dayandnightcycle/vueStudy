@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .box{
+         position: relative;
+     }
+       .logo{
+           
+            width: 200px;
+            height: 100px;
+            background-color: gray;
+            display: block;
+
+       }
+       .logo::before{
+           position: absolute;
+           left: 0;
+           top: 0;
+           content: "";
+           width: 49px;
+           height: 49px;
+           background-color: red;
+           transition: all .3s;
+           display: block;
+          /* opacity: 1; */
+       }
+       .logo::after{
+        position: absolute;
+           left: 0;
+           top: 0;
+             width: 49px;
+           height: 49px;
+           content: "";
+           background-color: green;
+           transition: all .3s;
+           /* margin-left: -49px; */
+           /* opacity: 0; */
+           display: block;
+       }
+     
+    </style>
+</head>
+<body>
+    <div class="box">
+       <a href="" class="logo"></a>
+      
+    </div>
+</body>
+</html>

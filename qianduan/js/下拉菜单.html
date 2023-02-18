@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            list-style: none;
+            /* display: inline-block;; */
+            width: 150px;
+            height: 50px;
+            border: 1px solid #000;
+            background-color: green;
+            line-height: 50px;
+            text-align: center;
+        }
+        .list{
+            display: none;
+        }
+        .xianshi{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+        <div>下拉菜单</div>
+
+        <ul class="list">
+            <li >下拉菜单1</li>
+            <li >下拉菜单2</li>
+            <li >下拉菜单3</li>
+            <li >下拉菜单4</li>
+        </ul>
+        
+    
+    <script>
+        var li = document.querySelector('div');
+        var ul= document.querySelector('ul');
+        // var li2 = document.querySelector('.list');
+        console.log(li);
+        console.log(ul);
+        var flag = 0;
+        li.onclick = function (){
+            console.log("鼠标");
+            if(flag == 0){
+                ul.className = 'xianshi';
+                 flag=1;
+            }else{
+                ul.className = 'list';
+                flag=0;
+            }
+            // for(var i = 0; i < li2.length; i++){
+            //     li2[i].className = 'xianshi'; 
+            // }
+
+            // li2.className = 'list1';
+            
+        }
+
+    </script>
+</body>
+</html>

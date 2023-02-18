@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 290px;
+        height: 50px;
+        border: 2px solid rgb(114, 217, 249);
+        margin: 100px auto;
+
+
+    }
+    input{
+        height: 50px;
+        /* height: 100%; */
+        
+        width: 210px;
+        border: 0;
+        outline: none;
+        color: #ccc;
+       
+        background-color: green;
+
+    }
+    button{
+        background-color: red;
+        width: 80px;
+        /* box-sizing: border-box; */
+        height: 50px;
+        /* height: 100%; */
+        border: 0;
+        /* display: inline-block; */
+        color:#fff
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" value=""  placeholder="这是手机"><button>搜索</button>
+    </div>
+    <script>
+        var input = document.querySelector('input');
+
+
+        input.onfocus = function (){
+            console.log(1);
+            if(this.value === '手机'){
+                this.value = '';
+            }
+           
+        }
+        input.onblur = function (){
+            if(this.value === ''){
+                this.value = '手机';
+            }
+        }
+        
+
+        
+        // put.onfocus = function (){
+        //         this.value = '';
+           
+        // }
+        // put.onblur = function (){
+           
+        //         this.value = '手机';
+           
+           
+    </script>
+</body>
+</html>

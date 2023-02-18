@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.字符串长度
+        var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        console.log(str.length);
+        //2.取出指定位置的字符，如0，3，5，9等 adfj
+        console.log(str.indexOf('a'));
+        console.log(str[0]);
+        console.log(str[3]);
+        console.log(str[5]);
+        console.log(str[9]);
+        //3.查找指定字符是否在以上字符串中存在，如 i，c，b等
+        console.log(str.indexOf("i"));
+        console.log(str.indexOf("c"));
+        console.log(str.indexOf("b"));
+        //4.替换指定的字符，如g替换为22 ss替换为b
+        console.log(str.replace('g','22'));
+        //5.截取指定开始位置到结束位置的字符串，如取得1-5的字符串
+        console.log(str.substr(1,5));
+        console.log(str.slice(1,5));
+        console.log(str.substring(1,5));
+        //6.找出以上字符串中出现次数最多的字符和出现的次数
+        // 核心算法：利用 charAt(） 遍历这个字符串
+        // 把每个字符都存储给对象， 如果对象没有该属性，就为1，如果存在了就 +1
+        // 遍历对象，得到最大值和该字符
+        // var o = {
+        //     name:'dd',
+        // }
+        // if(o['name']){
+        //     console.log("youshuxing");
+        // }else{
+        //     console.log("meiyou");
+        // }
+
+        var m = {};
+        for(var i = 0;i < str.length;i++){
+            var chars = str.charAt(i);
+            if(m[chars]){
+                m[chars]++;
+            }else{
+                m[chars] = 1;
+            }
+        }
+        console.log(m);
+
+        var max = 0;
+        var ch = '';
+        for(var k in m){
+            if(m[k] > max){
+                max = m[k];
+                ch = k;
+            }
+        }
+        
+        console.log('出现最多的字符'+ch);
+        console.log('出现次数'+max);
+        //7.遍历字符串，并将遍历出的字符两头添加符号"@"
+        var str2 = '';
+        for(var i = 0; i < str.length; i++){
+            str2 += '@';
+            str2 += str.charAt(i);
+        }
+        str2 += '@';
+        console.log(str2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

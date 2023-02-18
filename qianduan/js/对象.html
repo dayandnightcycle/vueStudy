@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用字面量创建对象
+        var dog = {
+            name:'可可',
+            type:'阿拉斯加',
+            age:5,
+            color:'棕红色',
+            barkKill:function(){
+                console.log('汪汪汪');
+            },
+            showKill:function(){
+                console.log('演电影');
+            }
+        };
+        var j = 0;
+        for(var k in dog){
+            console.log(k);
+            console.log(dog[k]);
+            console.log('计算次数' + j++);
+        }
+        console.log(dog.name);
+        console.log(dog.type);
+        console.log(dog['age']);
+        console.log(dog['color']);
+        dog.barkKill();
+        dog.showKill();
+        dog.showKill;  //方法后必须加括号
+
+        //利用new Object创建对象
+        var man = new Object();
+        man.name = '鸣人';
+        man.sex = '男';
+        man.age = 19;
+        man.skill = function(){
+            console.log('影分身术');
+        }
+        console.log(man.name);
+        console.log(man.sex);
+        console.log(man['age']);
+        man.skill();
+
+        //构造函数创建对象
+        function Hero(name,type,blood){
+            this.name = name;
+            this.blood = blood;
+            this.type = type;
+            this.attack = function(at){
+                console.log(at);
+            }
+        }
+        var lp = new Hero('廉颇','力量型',500);
+        console.log(lp.name);
+        console.log(lp.blood);
+        console.log(lp.type);
+        lp.attack('近战');
+
+        var lp = new Hero('后裔','射手型',100);
+        console.log(lp.name);
+        console.log(lp.blood);
+        console.log(lp.type);
+        lp.attack('远程');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
