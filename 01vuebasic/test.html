@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <script type="text/javascript">
+        Vue.config.productionTip = false; //阻止vue在启动时生成生产提示
+        Vue.config.devtools = true;
+    </script>
+</head>
+<body>
+
+
+<div id="root">
+    <p>{{message}}</p>
+    <input v-model="message">
+</div>
+<!--<ol id="root">-->
+<!--    <com-->
+<!--        v-for="item in groceryList"-->
+<!--        v-bind:todo="item">-->
+<!--&lt;!&ndash;        v-bind:key="item.id">&ndash;&gt;-->
+<!--    </com>-->
+<!--</ol>-->
+<script>
+    Vue.component('com', {
+        props: ['todo'],
+        template: '<li>{{todo.text}}</li>'
+    })
+    let data = {
+
+        message: 'aaa'
+    }
+    Object.freeze(data)
+    const vm = new Vue(
+        {
+            el: '#root',
+            data: data,
+            created:function (){
+                console.log('message ='+this.message)
+            }
+        }
+    )
+</script>
+</body>
+</html>
